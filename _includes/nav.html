@@ -60,7 +60,7 @@
   
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
-      <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+      <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title or node.nav_no_fold %} active{% endif %}">
         {%- if page.parent == node.title or page.grand_parent == node.title -%}
           {%- assign first_level_url = node.url | absolute_url -%}
         {%- endif -%}
